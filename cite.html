@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Citation</title>
+<link rel="stylesheet" href="project_style.css">
+
+
+
+<script type = "text/javascript">
+<!--
+
+//open window
+
+
+//make a variable for each button
+var espn;
+var icon;
+var pl;
+var teamtalk;
+var quizForm;
+
+//make each variable "clickable" and call the open_window function for corresponding url
+function start(){
+	document.getElementById("espn").addEventListener("click", open_window, false);
+	document.getElementById("icon").addEventListener("click", open_icon, false);
+	document.getElementById("pl").addEventListener("click", open_pl, false);
+	document.getElementById("teamtalk").addEventListener("click", open_teamtalk, false);
+	document.getElementById("quizForm").addEventListener("click", open_quizForm, false);
+}
+
+
+//specify the url for each varibale
+function open_window(){
+	espn = window.open("https://www.espn.com/soccer/","","menubar=yes, toolbar=yes, height=600,width=450");
+}
+
+function open_icon(){
+	icon = window.open("https://www.flaticon.com/free-icons/soccer","","menubar=yes, toolbar=yes, height=400,width=300");
+}
+function open_pl(){
+	icon = window.open("https://www.premierleague.com/","","menubar=yes, toolbar=yes, height=400,width=300");
+}
+
+function open_teamtalk(){
+	icon = window.open("https://www.teamtalk.com/","","menubar=yes, toolbar=yes, height=400,width=300");
+}
+
+function open_quizForm(){
+	icon = window.open("https://codepen.io/timivey/pen/zxyNrw","","menubar=yes, toolbar=yes, height=400,width=300");
+}
+
+
+//window.addEventListener("load", start, false);
+
+
+var interval = null;
+var speed = 6;
+var count = 0;
+
+function run(){
+
+	count+= speed;
+	
+	// stop the animation when image is large enough
+	if (count >=375){
+		window.clearInterval(interval);
+		interval = null;
+		}//end if
+	
+	var bigImage = document.getElementById( "imgCover" );
+	bigImage.setAttribute("style", "width: " + (0.7656 * count + "px;")
+	+ "height:" + (count + "px;"));
+	}//end function run()
+
+	function display(imgfile){
+		if (interval)
+			return;
+		var bigImage = document.getElementById("imgCover");
+		bigImage.setAttribute("style","width: 0px; height: 0px;");
+		bigImage.setAttribute("src","fullsize/" + imgfile);
+		bigImage.setAttribute("alt","Large version of " + imgfile);
+		count = 0;
+		interval = window.setInterval("run()", 10);
+	}//end function display()
+	
+	function begin(){
+		document.getElementById("player1").addEventListener("click", function(){display("players/pics/cr7.jpg");},false);
+		document.getElementById("player2").addEventListener("click", function(){display("players/pics/messi.jpg");},false);
+		document.getElementById("player3").addEventListener("click", function(){display("players/pics/ronaldinho.jpg");},false);
+		document.getElementById("player4").addEventListener("click", function(){display("players/pics/rooney.jpg");},false);
+		document.getElementById("player5").addEventListener("click", function(){display("players/pics/zidane.jpg");},false);
+		document.getElementById("player6").addEventListener("click", function(){display("players/pics/maradona.jpg");},false);
+		
+	}
+	
+	
+	window.addEventListener("load", start, false);
+
+	window.addEventListener("load", begin, false);
+
+
+-->
+</script>
+</head>
+
+<body>
+
+
+<!-- the very top of each page -->
+<div id="banner">
+	<img class="right" src="images/image6.png" alt="nav soccer ball" width="165" height="95">
+	
+	<h1><br>W<img src="images/image3.png" alt="world soccer ball" width="35" height="27">RLD SOCCER</h1>
+	
+	
+	</div>
+
+
+  <!-- website navigation bar -->
+<nav>
+		<ul>
+		  <li><a href="home.html">Home</a></li>
+		  <li><a href="news.html">News</a></li>
+		  <li><a href="highlights.html">Highlights</a></li>
+		  <li><a href="quiz.html">Quiz</a></li>
+		  <li><a href="records.html">other</a></li>
+		  <li><a href="cite.html">References</a></li>
+		</ul>
+</nav>
+
+
+<div id="content">
+
+
+
+	<h3>Sources</h3>
+	<p>To cite an image obtained from the Internet, you need to provide the the following information (as detailed as possible): 
+	<br>a descriptive name of the image, copyright owner (may be the name of the website), copyright date/year, URL, etc
+	</p><br>
+	
+	
+	<!--buttons that open a new window -->
+	<h3>Sites</h3>
+	<p>	<form id = "form" action="form">
+		<input type="button" name="icon" id="icon" value="Flat Icon"/>
+		<input type="button" name="espn" id="espn" value="ESPN"/>
+		<input type="button" name="pl" id="pl" value="Premier League"/>
+		<input type="button" name="teamtalk" id="teamtalk" value="TeamTalk"/>
+		<input type="button" name="quizForm" id="quizForm" value="Quiz template"/>
+	</form>
+	</p><br>
+	
+	
+		<!--   -->
+	<h3><img class="right" alt ="quizForm" src="images/quiz_template.png" width="165" height="95">
+	   Description: A screenshot (with the link) of the template used for the quiz form   <br>
+	   Owner: Codepen         <br>
+	   Date: 03/18/2023          <br>
+	   URL:<a href="https://codepen.io/timivey/pen/zxyNrw">www.Codepen.io</a> <br>
+	   
+	</h3><br>
+	
+	
+	<h3><img class="right" alt ="benzema" src="images/image6.jpg" width="165" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: Fotmob- soccer website         <br>
+	   Date: 02/20/2023          <br>
+	   URL:<a href="https://www.espn.com/soccer/blog-the-toe-poke/story/4850317/real-madrids-karim-benzema-joins-laliga-legends-in-top-five-all-time-top-goal-scorers-can-he-catch-ronaldo-and-messi">www.espn.com</a> <br>
+	   
+	</h3><br>
+	
+	<h3><img class="right" alt ="Richarlison" src="images/image7.jpg" width="165" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: Team Talk         <br>
+	   Date: 02/20/2023          <br>
+	   URL:<a href="https://www.teamtalk.com/tottenham-hotspur/richarlison-accuses-everton-lack-ambition-explaining-spurs-challenge-delight">www.teamtalk.com</a> <br>
+	   
+	</h3><br>
+	
+	<h3><img class="right" alt="world soccer ball" src="images/image3.png" width="165" height="95">
+	   Description: A soccer ball image   <br>
+	   Owner: Flaticon       <br>
+	   Date: 02/20/2023        <br>
+	   URL:<a href="https://www.flaticon.com/free-icon/football_8910102?term=football&page=2&position=49&origin=search&related_id=8910102">www.flaticon.com</a>           <br>
+	   
+	</h3><br>
+
+	<h3><img class="right" alt ="soccer kick"  src="images/image4.png" width="165" height="95">  
+	   Description: A cartoon of a ball being kicked   <br>
+	   Owner: Flaticon        <br>
+	   Date: 02/20/2023         <br>
+	   URL:<a href="https://www.flaticon.com/free-icon/shoot_3333673?term=football&page=1&position=23&origin=search&related_id=3333673">www.flaticon.com</a>           <br>
+	   
+	</h3><br>
+	
+	<h3><img class="right" alt ="nav soccer ball" src="images/image6.png" width="165" height="95">
+	   Description:   <br>
+	   Owner:         <br>
+	   Date: 02/20/2023       <br>
+	   URL: <a href="https://www.flaticon.com/free-icon/football_3561492?term=football&page=4&position=19&origin=search&related_id=3561492">www.flaticon.com</a>          <br>
+	   
+	</h3><br>	
+
+<!--News images-->
+<h1>News sources</h1>
+
+	<h3><img class="right" alt ="" src="images/transfer1.jpg" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner:  St. Mirren football club       <br>
+	   Date: 02/20/2023         <br>
+	   URL:<a href="https://www.stmirren.com/all-news/4784-dylan-reid-departs-to-join-crystal-palace">www.stmirren.com</a>           <br>
+	   
+	</h3><br>
+
+	<h3><img class="right" alt ="Julian Araujo" src="images/transfer2.png" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner:  Lompoc Record       <br>
+	   Date: 02/20/2023         <br>
+	   URL:<a href="https://lompocrecord.com/sports/local/julian-araujo-is-off-to-barcelona-after-all/article_0f9b758c-e31b-5f02-9e98-55af6b9d4cb8.html">www.LompocRecord.com </a>          <br>
+	</h3><br>
+
+
+	<h3><img class="right" alt ="Nicolo Zaniolo" src="images/transfer3.png" width="160" height="95">
+	   Description: A picture of a soccer player  <br>
+	   Owner :  AA Sports       <br>
+	   Date:02/18/2023          <br>
+	   URL:<a href="https://www.aa.com.tr/en/sports/galatasaray-sign-italian-midfielder-nicolo-zaniolo-from-roma/2812219">www.aaSport.com</a>           <br>
+	</h3><br>
+
+
+	<h3><img class="right" alt ="andre ayew " src="images/transfer4.png" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner:         <br>
+	   Date: 02/20/2023          <br>
+	   URL:<a href="https://www.nottinghampost.com/sport/football/transfer-news/nottingham-forest-receive-andre-ayew-8106913">www.nottinghampost.com  </a>         <br>
+	   
+	</h3><br>
+	
+	
+	<h3><img class="right" alt ="Boubacar Traore" src="images/transfer5.png" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: Premier League        <br>
+	   Date: 02/20/2023          <br>
+	   URL:<a href="https://www.premierleague.com/players/117315/Boubacar-Traor%C3%A9/overview">www.premierleague.com  </a>         <br>
+	</h3><br>
+	
+	
+	<h3><img class="right" alt ="Louie Barry " src="images/transfer6.jfif" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: HITC        <br>
+	   Date: 02/20/2023          <br>
+	   URL:<a href="https://www.hitc.com/en-gb/2021/08/11/the-next-pele-some-ipswich-fans-blown-away-by-louie-barrys-debut-performance/">www.hitc.com  </a>         <br>
+	   
+	</h3><br>
+	
+	
+	<h3><img class="right" alt ="Luke Plange " src="images/transfer7.png" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: Premier League        <br>
+	   Date: 02/19/2023          <br>
+	   URL:<a href="https://www.premierleague.com/players/49476/Luke-Plange/overview">www.premierleague.com  </a>         <br>
+	</h3><br>
+	
+
+	
+	<h3><img class="right" alt ="Emmanuel Longelo " src="images/transfer8.jpg" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: West Ham United football team        <br>
+	   Date: 02/20/2023          <br>
+	   URL:<a href="https://www.whufc.com/news/emmanuel-longelo-completes-birmingham-city-switch">www.whufc.com  </a>         <br>
+	   
+	</h3><br>
+	
+<!--Quiz: random images images-->
+<h1>Quiz: random images</h1>
+	<h3><img class="right" alt ="Maradona " src="img1.jpg" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: Planet Football        <br>
+	   Date: 03/16/2023          <br>
+	   URL:<a href="https://www.planetfootball.com/quick-reads/seven-times-diego-maradona-showed-greatest-player-earth/">www.planetfootball.com  </a>         <br>
+	</h3><br>
+	
+	
+	<h3><img class="right" alt ="Cristiano Ronaldo " src="img2.jpg" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: The Oberlin Review        <br>
+	   Date: 03/17/2023          <br>
+	   URL:<a href="https://oberlinreview.org/26584/sports/cristiano-ronaldo-sets-new-record-inspiring-soccer-fans-worldwide/">www.oberlinreview.com  </a>         <br>
+	</h3><br>
+	
+	
+	<h3><img class="right" alt ="Pele" src="img3.jpg" width="160" height="95">
+	   Description: A picture of a soccer player   <br>
+	   Owner: The New York Times        <br>
+	   Date: 03/17/2023          <br>
+	   URL:<a href="https://www.nytimes.com/2022/12/29/sports/soccer/pele-dies.html/">www.nytimes.com  </a>         <br>
+	</h3><br>
+      <div id="maining">
+         <img id="imgCover" src="fullsize/players/pics/cr7.jpg" alt="Full cover image">
+      </div>
+
+      <div id="thumbs">
+         <img id="player1" alt="C++ How to Program book cover" width="200" height="150" src="players/pics/cr7.jpg">
+         <img id="player2" alt="Internet &amp; WWW How to Program book cover" width="200" height="150" src="players/pics/messi.jpg">
+         <img id="player3" alt="Java How to Program book cover" width="200" height="150" src="players/pics/ronaldinho.jpg">
+         <img id="player4" alt="Visual Basic 2010 How to Program book cover" width="200" height="150" src = "players/pics/rooney.jpg">
+	     <img id = "player5" alt = "Visual C# 2010 How to Program book cover"  width="200" height="150" src = "players/pics/zidane.jpg">
+	     <img id = "player6" alt = "Java for Programmers book cover" width="200" height="150" src = "players/pics/maradona.jpg">
+		 		
+   
+   </div>
+	
+</div>
+
+ 
+ 
+ <!--footer-->
+<div id="footer">
+	<p>This website is developed as an educational project. Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+</div>
+
+
+</body>
+</html>

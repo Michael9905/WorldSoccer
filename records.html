@@ -1,0 +1,220 @@
+<!-- Fig. 16.5: SwitchContent.html -->
+<!-- Asynchronously display content without reloading the page. -->
+<html>
+<head>
+   <meta charset = "utf-8">
+   <link rel="stylesheet" href="project_style.css">
+   <style type = "text/css">
+   
+      .box { border: 1px solid black; padding: 10px }
+	  #heading {text-align: center;}
+		.highlighted {
+		background-color:yellow;
+		width: 10%}
+		
+		#title1{background-color: Green;}
+		h1, h2  {color:white;}
+   </style>
+   <title>Switch Content Asynchronously</title>
+   <script>
+      var asyncRequest; // variable to hold XMLHttpRequest object
+
+      // set up event handlers
+      function registerListeners()
+      {
+         var img;
+         img = document.getElementById( "player1" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "players/player1.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "player2" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "players/player2.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "player3" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "players/player3.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "player4" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "players/player4.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "player5" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "players/player5.html" ); }, false );
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "player6" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "players/player6.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+      } // end function registerListeners
+
+      // set up and send the asynchronous request.
+      function getContent( url )
+      {
+         // attempt to create XMLHttpRequest object and make the request
+         try
+         {
+            asyncRequest = new XMLHttpRequest(); // create request object
+
+            // register event handler
+            asyncRequest.addEventListener(
+               "readystatechange", stateChange, false); 
+            asyncRequest.open( "GET", url, true ); // prepare the request
+            asyncRequest.send( null ); // send the request
+         } // end try
+         catch ( exception )
+         {
+            alert( "Request failed." );
+         } // end catch
+      } // end function getContent
+      
+      // displays the response data on the page
+      function stateChange()
+      {
+         if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
+         {
+            document.getElementById( "contentArea" ).innerHTML = 
+               asyncRequest.responseText; // places text in contentArea
+         } // end if
+      } // end function stateChange
+
+      // clear the content of the box
+      function clearContent()
+      {
+         document.getElementById( "contentArea" ).innerHTML = "";
+      } // end function clearContent
+
+	  
+	  
+	  
+	  
+	  //highlight starts...
+function run(){
+	document.getElementById("highlight").addEventListener("click", highlight_Node, false);
+
+	//delete image each click
+	let images = document.querySelectorAll("#images-container img");
+	let button = document.getElementById("predict");
+	let index = 0;
+
+	button.addEventListener("click", () => {
+	  if (index < images.length) {
+		images[index].remove();
+		index++;
+	  } else {
+		alert("No more images to delete.");
+	  }
+	});
+}
+
+//highlights a random h1 heading
+function highlight_Node(){
+	var headings = document.getElementsByTagName("h4");
+	var randomIndex = Math.floor(Math.random() * headings.length);
+	var randomHeading = headings[randomIndex];
+	randomHeading.setAttribute("class", "highlighted");
+}
+
+      window.addEventListener( "load", registerListeners, false );
+
+
+window.addEventListener("click", run, false);
+   </script>
+</head>
+<body>
+<body>
+
+
+<!-- the very top of each page -->
+<div id="banner">
+	<img class="right" src="images/image6.png" alt="nav soccer ball" width="165" height="95">
+	
+	<h1><br>W<img src="images/image3.png" width="35" alt="world soccer ball" height="27">RLD SOCCER</h1>
+	
+	
+	</div>
+
+
+  <!-- website navigation bar -->
+<nav>
+		<ul>
+		  <li><a href="home.html">Home</a></li>
+		  <li><a href="news.html">News</a></li>
+		  <li><a href="highlights.html">Highlights</a></li>
+		  <li><a href="quiz.html">Quiz</a></li>
+		  <li><a href="records.html">other</a></li>
+		  <li><a href="cite.html">References</a></li>
+
+		</ul>
+</nav>
+
+
+
+<div id="content">
+
+
+   <img id = "player1" alt = "CR7"
+      width="200" height="150" src = "players/pics/cr7.jpg">
+   <img id = "player2" alt = "Messi"
+      width="200" height="150" src = "players/pics/messi.jpg">
+   <img id = "player3" alt = "Ronaldinho"
+      width="200" height="150" src = "players/pics/ronaldinho.jpg">
+   <img id = "player4" alt = "Rooney"
+      width="200" height="150" src = "players/pics/rooney.jpg">
+   <img id = "player5" alt = "Zidane" 
+      width="180" height="150" src = "players/pics/zidane.jpg">
+   <!--
+   <img id = "player6" alt = "Java for Programmers book cover"
+      width="200" height="150" src = "players/pics/maradona.jpg">
+	 -->
+   <div class = "box" id = "contentArea"></div><br><br>
+
+
+<div class = "box" id = "title1">
+<h1>Predict the Champions league winner</h1>
+<h2>(First team highlighted will be the winners)</h2></b>
+</div>
+	<h4>Real Madrid</h4>
+	<h4>Chelsea</h4>
+	<h4>Liverpool</h4>
+	<h4>Barcelona</h4>
+	<h4>Manchester City</h4>
+	<h4>AC milan</h4>
+
+
+<form id = "form" action="form">
+		<input type = "button" name = "highlight" id = "highlight" value="Predict Cup Winner">
+</form><br>
+
+<!--predict 2023 Ballon O'dor winner-->
+<div class = "box" id = "title1">
+<h1>Predict 2023 Ballon O'dor winner</h1>
+<h2>Press the button to eliminate players...<br> the last player remaining will be the winner<h2>
+</div>
+<div id="images-container">
+<div class = "box">
+	<img class="select" src="images/image6.jpg" alt="benzema" width="300" height="175">
+	<img class="select" src="img1.jpg" alt="maradona" width="300" height="175">
+	<img class="select" src="img2.jpg" alt="pele" width="300" height="175">
+	<img class="select" src="img3.jpg" alt="cr7" width="300" height="175">
+	<img class="select" src="images/transfer8.jpg" alt="dembele" width="300" height="175">
+	<img class="select" src="images/transfer1.jpg" alt="dembele" width="300" height="175">
+</div>
+</div>
+	
+<form id = "form2" action="form2">
+		<input type = "button" name = "predict" id = "predict" value="Eliminate player">
+</form><br>
+
+</div>
+
+
+<!--footer-->
+<div id="footer">
+	<p>This website is developed as an educational project. Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+</div>
+   
+   
+</body>
+</html>
