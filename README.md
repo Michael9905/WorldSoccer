@@ -3,7 +3,7 @@
   <a href="img1.jpg">Programmer</a>
   Our team works hard to keep our fans and followers updated, with our top web designers and researchers working hard to give you, the best fans, more about the beautiful game. In our site, we provide latest news, highlights of recent games, goals throughout different popular leagues, and upcoming soccer games and goals of recent games
   
-  Hi, I'm Josh! <br/><a href="https://github.com/joshmadakor1">Programmer</a>, <a href="https://www.linkedin.com/in/joshmadakor/">Cybersecurity Professional</a>, <a href="https://www.youtube.com/c/joshmadakor">YouTuber</a></h3>
+  Hi, I'm Josh! <br/><a href="home.html">Home</a>, <a href="https://www.linkedin.com/in/joshmadakor/">Cybersecurity Professional</a>, <a href="https://www.youtube.com/c/joshmadakor">YouTuber</a></h3>
 
 <h2>👨‍💻 Software Development Projects:</h2>
 
