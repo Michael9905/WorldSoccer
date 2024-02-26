@@ -7,5 +7,5 @@
 <a href="highlights.html">Highlight</a><br>
 <a href="quiz.html">Quiz</a><br>
 <a href="records.html">Other</a><br>
-https://github.com/[Michael9905]/[WorldSoccer]/blob/[branch]/img1.jpg?raw=true
+https://github.com/[Michael9905]/[WorldSoccer]/blob/[main]/img1.jpg?raw=true
 <h3>
