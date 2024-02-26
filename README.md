@@ -5,7 +5,7 @@
   
   <br/><a href="home.html">Home</a><br>
 <a href="news.html">News</a><br>
-<a href="hightlights.html">Highlight</a><br>
+<a href="highlights.html">Highlight</a><br>
 <a href="quiz.html">Quiz</a><br>
 <a href="records.html">Other</a><br>
 <h3>
